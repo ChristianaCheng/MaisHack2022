@@ -4,8 +4,8 @@ DOCKER_REGISTRY := mathematiguy
 IMAGE := $(DOCKER_REGISTRY)/$(REPO_NAME)
 HAS_DOCKER ?= $(shell which docker)
 RUN ?= $(if $(HAS_DOCKER), docker run $(DOCKER_ARGS) --rm -v $$(pwd):/code -w /code -u $(UID):$(GID) $(IMAGE))
-UID ?= kaimahi
-GID ?= kaimahi
+UID ?= user
+GID ?= user
 DOCKER_ARGS ?=
 
 .PHONY: docker docker-push docker-pull enter enter-root
