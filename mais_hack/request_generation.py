@@ -12,6 +12,7 @@ def get_api_key(secrets_yaml):
 
     return secrets['api_key']
 
+
 def request_generation(prompt, key=None, **kwargs):
 
     '''
