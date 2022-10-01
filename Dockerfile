@@ -40,3 +40,7 @@ COPY mais_hack /code/mais_hack
 COPY setup.py /code
 RUN python${PYTHON_VERSION} -m pip install -e /code
 ENV PYTHONPATH="/code:${PYTHONPATH}"
+
+# Install R packages
+RUN Rscript -e 'install.packages("shiny")'
+RUN Rscript -e 'install.packages("rsconnect")'
