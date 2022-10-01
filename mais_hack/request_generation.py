@@ -10,7 +10,7 @@ def get_api_key(secrets_yaml):
     with open(secrets_yaml, "r") as f:
         secrets = yaml.load(f, Loader=yaml.FullLoader)
 
-    return secrets["api_key"]
+    return secrets["cohere"]["api_key"]
 
 
 def request_generation(prompt, key=None, **kwargs):
