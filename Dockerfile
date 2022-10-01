@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM rocker/tidyverse
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update
