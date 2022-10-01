@@ -1,3 +1,6 @@
 ipython
 jupyter
 jupyterlab
+cohere
+PyYAML
+pyprojroot

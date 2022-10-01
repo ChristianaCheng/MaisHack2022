@@ -36,7 +36,7 @@ COPY requirements.txt /root/requirements.txt
 RUN pip3 install -r /root/requirements.txt
 
 # Install local package
-COPY pkg /code/pkg
+COPY mais_hack /code/mais_hack
 COPY setup.py /code
 RUN python${PYTHON_VERSION} -m pip install -e /code
 ENV PYTHONPATH="/code:${PYTHONPATH}"
