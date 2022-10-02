@@ -34,4 +34,4 @@ request_generation <- function(prompt, key, ...) {
 key = get_api_key('secrets.yaml')
 
 prompt = 'mary had a little'
-request_generation(prompt, key)
+r <- request_generation(prompt, key, num_generations=3)
