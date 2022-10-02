@@ -25,10 +25,13 @@ request_generation <- function(prompt, key, ...) {
             add_headers(.headers = headers),
             encode='json')
 
-  print(content(r))
-
   generations = unlist(content(r)$generations)
 
   return(generations)
 
 }
+
+key = get_api_key('secrets.yaml')
+
+prompt = 'mary had a little'
+request_generation(prompt, key)

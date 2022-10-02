@@ -1,11 +1,10 @@
-library(here)
 library(httr)
 library(shiny)
 library(jsonlite)
 
 # Load cohere API
-source(here("shiny/cohere.R"), local=TRUE)
-key = get_api_key(here('secrets.yaml'))
+source("cohere.R", local=TRUE)
+key = get_api_key('secrets.yaml')
 
 
 ui <- fluidPage(
