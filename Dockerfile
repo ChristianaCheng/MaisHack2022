@@ -42,5 +42,7 @@ RUN python${PYTHON_VERSION} -m pip install -e /code
 ENV PYTHONPATH="/code:${PYTHONPATH}"
 
 # Install R packages
+RUN Rscript -e 'install.packages("here")'
 RUN Rscript -e 'install.packages("shiny")'
 RUN Rscript -e 'install.packages("rsconnect")'
+RUN Rscript -e 'install.packages("glue")'
