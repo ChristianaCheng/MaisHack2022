@@ -14,11 +14,11 @@ run:
 	$(RUN) Rscript shiny/cohere.R
 
 deploy:
-	Rscript shiny/deploy.R
+	(cd shiny && Rscript shiny/deploy.R)
 
 shiny: DOCKER_ARGS=-p 7280:7280
 shiny:
-	$(RUN) Rscript shiny/app.R
+	$(RUN) bash -c "(cd shiny && Rscript app.R)"
 
 JUPYTER_PASSWORD ?= jupyter
 JUPYTER_PORT ?= 8888
