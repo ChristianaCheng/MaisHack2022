@@ -14,7 +14,7 @@ run:
 	$(RUN) Rscript shiny/cohere.R
 
 deploy:
-	(cd shiny && Rscript deploy.R)
+	$(RUN) bash -c "(cd shiny && Rscript deploy.R)"
 
 shiny: DOCKER_ARGS=-p 7280:7280
 shiny:
