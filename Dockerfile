@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update
 
 # Create rstudio 'rstudio' to create a home directory
-RUN rstudioadd rstudio
+# RUN useradd rstudio
 RUN mkdir -p /home/rstudio/
 RUN chown -R rstudio:rstudio /home/rstudio
 ENV HOME /home/rstudio
@@ -46,3 +46,5 @@ RUN Rscript -e 'install.packages("here")'
 RUN Rscript -e 'install.packages("shiny")'
 RUN Rscript -e 'install.packages("rsconnect")'
 RUN Rscript -e 'install.packages("glue")'
+RUN Rscript -e 'install.packages("shinythemes")'
+RUN Rscript -e 'devtools::install_github("wleepang/shiny-pager-ui")'
