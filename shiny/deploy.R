@@ -11,4 +11,4 @@ cat("Logging in...\n")
 do.call(rsconnect::setAccountInfo, secrets)
 
 cat("Deploying...\n")
-rsconnect::deployApp(appDir="shiny", appName="helpium")
+rsconnect::deployApp(appDir=".", appName="helpium")
