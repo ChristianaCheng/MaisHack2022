@@ -8,7 +8,14 @@ UID ?= user
 GID ?= user
 DOCKER_ARGS ?=
 
-.PHONY: docker docker-push docker-pull enter enter-root
+.PHONY: shiny docker docker-push docker-pull enter enter-root
+
+run:
+	$(RUN) Rscript shiny/cohere.R
+
+shiny: DOCKER_ARGS=-p 7280:7280
+shiny:
+	$(RUN) Rscript shiny/app.R
 
 JUPYTER_PASSWORD ?= jupyter
 JUPYTER_PORT ?= 8888
