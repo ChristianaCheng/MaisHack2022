@@ -3,11 +3,11 @@ FROM rocker/tidyverse
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update
 
-# Create user 'user' to create a home directory
-RUN useradd user
-RUN mkdir -p /home/user/
-RUN chown -R user:user /home/user
-ENV HOME /home/user
+# Create rstudio 'rstudio' to create a home directory
+RUN rstudioadd rstudio
+RUN mkdir -p /home/rstudio/
+RUN chown -R rstudio:rstudio /home/rstudio
+ENV HOME /home/rstudio
 
 # Install apt packages
 RUN apt update
