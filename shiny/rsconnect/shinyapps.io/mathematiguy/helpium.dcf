@@ -1,0 +1,11 @@
+name: helpium
+title:
+username:
+account: mathematiguy
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7181594
+bundleId: 6360089
+url: https://mathematiguy.shinyapps.io/helpium/
+when: 1664683084.84691
+lastSyncTime: 1664683084.84695
