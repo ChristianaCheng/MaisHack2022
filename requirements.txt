@@ -5,3 +5,4 @@ cohere
 PyYAML
 pyprojroot
 scrapy
+pandas

@@ -27,4 +27,5 @@ def request_generation(prompt, key=None, **kwargs):
     co = cohere.Client(f"{key}")
     response = co.generate(prompt=prompt, **kwargs)
 
-    return response.generations[0].text
+    # return response.generations[0].text
+    return response.generations
