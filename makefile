@@ -13,6 +13,9 @@ DOCKER_ARGS ?=
 run:
 	$(RUN) Rscript shiny/cohere.R
 
+deploy:
+	Rscript shiny/deploy.R
+
 shiny: DOCKER_ARGS=-p 7280:7280
 shiny:
 	$(RUN) Rscript shiny/app.R
