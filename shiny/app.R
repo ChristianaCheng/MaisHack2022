@@ -1,6 +1,9 @@
 library(httr)
 library(shiny)
 library(jsonlite)
+library(shinythemes)
+library(shinyPagerUI)
+
 
 # Load cohere API
 source("cohere.R", local=TRUE)
@@ -8,6 +11,7 @@ key = get_api_key('secrets.yaml')
 
 
 ui <- fluidPage(
+  theme=shinytheme("flatly"),
 
   titlePanel("Helpium"),
 
@@ -17,7 +21,8 @@ ui <- fluidPage(
   ),
 
   mainPanel(
-    textOutput("generated")
+    textOutput("generated"),
+    pageruiInput('pager', page_current=1, pages_total=3)
   )
 
 )
@@ -35,7 +40,7 @@ server <- function(input, output) {
       presence_penalty=0,
       num_generations=3
     )
-    paste(r, collapse="\n-----------\n")
+    r[input$pager$page_current]
   })
 
 }
