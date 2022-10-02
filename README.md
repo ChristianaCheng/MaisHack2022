@@ -17,7 +17,7 @@ make docker
 # launches a jupyterlab instance at localhost:8888
 make jupyter
 
-# starts the shiny app
+# starts the shiny app at localhost:7280
 make shiny
 
 # deploys the shiny app
