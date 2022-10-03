@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<title> Welcome to Helpium! </title>
+</head>
+<body>
+	<h1> What is Helpium? </h1>
+	<p> The purpose of helpium is to help people with poor literacy or second language speakers to write emails in order access essential services. Simply tell us what you need, and we can help you write an email or letter that will help you make your request in plain english.
+	<br><br>
+	Just tell us what you want the letter to be about on the left and the text will appear below. We hope we can help you get the assistance you need :)<br><br></p>
+	<label> <b> How can we help? </b> </label> <br><br>
+	{# pass in the var question from the python file #}
+	<p>{{question}}</p>
+	{# write python code inside html file using {% %} #}
+	{% for x in range(0,10) %}
+		{% if x % 2 == 1 %}
+			<p> {{x}} <p>
+		{% elif x == 5%}
+			<p> {{x}} <p>
+		{% else %}
+			<p> {{x}} <p>
+		{% endif %}
+	{% endfor %}
+	
+	{% for y in content %}
+			<p> {{y}} <p>
+	{% endfor %}
+
+</body>
+</html>
+

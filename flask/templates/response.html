@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Welcome to Helpium!
+{% endblock %}
+
+{% block content %}
+<p> The purpose of helpium is to help people with poor literacy or second language speakers to write emails in order access essential services. Simply tell us what you need, and we can help you write an email or letter that will help you make your request in plain english.
+<br><br>
+Just tell us what you want the letter to be about on the left and the text will appear below. We hope we can help you get the assistance you need :)<br><br></p>
+<label> <b> How can we help? </b> </label><br>
+{% endblock %}
+
+
+{% block panel %}
+
+<p><br><br>{{content[0]}}</p>
+
+<p><br>{{content[1]}} </p>
+
+<p><br>{{content[2]}} </p>
+{% endblock %}
